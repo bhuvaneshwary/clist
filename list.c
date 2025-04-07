@@ -21,6 +21,7 @@ typedef struct node2{
 }node2;
 
 
+void traverse_list(node *ptr);
 
 void append(int val, node ** n);
 
@@ -58,6 +59,16 @@ void append(int val, node ** n){
 				printf("the address of list after allocating head = %p \n",*n);
 				printf("the address of list after allocating,address of head = %p \n",n);
 		}
+
+}
+
+void traverse_list(node *ptr)
+{
+	while (ptr != NULL)
+    {
+        printf("Element: %d\n", ptr->data);
+        ptr = ptr->next;
+    }
 
 }
 
